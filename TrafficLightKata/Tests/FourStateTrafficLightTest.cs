@@ -10,7 +10,7 @@ namespace TrafficLightKata.Tests
         public void Run4States()
         {
             var tl = new FourStateTrafficLight();
-            var states = new[] { LightState.Red, LightState.RedYellow, LightState.Green, LightState.Yellow, LightState.Red };
+            var states = new[] { LightState.Red, LightState.RedYellow, LightState.Green, LightState.Yellow, LightState.Red, LightState.RedYellow, LightState.Green, LightState.Yellow, LightState.Red };
 
             foreach (var state in states)
             {

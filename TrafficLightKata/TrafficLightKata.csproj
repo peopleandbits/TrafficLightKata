@@ -45,7 +45,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -57,11 +59,14 @@
     <Compile Include="Infra\Interfaces.cs" />
     <Compile Include="Tests\FourStateTrafficLightTest.cs" />
     <Compile Include="FourState\FourStateLogic.cs" />
+    <Compile Include="Tests\FourStateHandlerTests.cs" />
+    <Compile Include="Tests\ThreeStateTrafficLightTest.cs" />
+    <Compile Include="Tests\ThreeStateHandlerTests.cs" />
     <Compile Include="ThreeState\ThreeStateHandlers.cs" />
     <Compile Include="ThreeState\ThreeStateLogic.cs" />
-    <Compile Include="Tests\ThreeStateTrafficLightTest.cs" />
+    <Compile Include="Tests\NaiveThreeStateTrafficLightTest.cs" />
     <Compile Include="Infra\StatePackage.cs" />
-    <Compile Include="ThreeState\ThreeStateTrafficLightOld.cs" />
+    <Compile Include="NaiveThreeStateTrafficLight.cs" />
     <Compile Include="ThreeStateTrafficLight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
