@@ -8,13 +8,30 @@ namespace TrafficLightTemplate
     public class TrafficLightTests
     {
         [TestMethod]
+        public void TwoStateTrafficLightTest()
+        {
+            var tl = new TwoStateTrafficLight();
+            var states = new[]
+            {
+                TwoStateLights.Red, TwoStateLights.Green,
+                TwoStateLights.Red, TwoStateLights.Green
+            };
+
+            foreach (var state in states)
+            {
+                Assert.AreEqual(state, tl.Current);
+                tl.GoNext();
+            }
+        }
+
+        [TestMethod]
         public void NaiveThreeStateTrafficLight()
         {
             var tl = new NaiveThreeStateTrafficLight();
             var states = new[]
             {
                 ThreeStateLights.Red, ThreeStateLights.Yellow, ThreeStateLights.Green, ThreeStateLights.Yellow,
-                ThreeStateLights.Red, ThreeStateLights.Yellow, ThreeStateLights.Green, ThreeStateLights.Yellow,
+                ThreeStateLights.Red, ThreeStateLights.Yellow, ThreeStateLights.Green, ThreeStateLights.Yellow
             };
 
             foreach (var state in states)
@@ -31,7 +48,7 @@ namespace TrafficLightTemplate
             var states = new[] 
             {
                 ThreeStateLights.Red, ThreeStateLights.Yellow, ThreeStateLights.Green, ThreeStateLights.Yellow,
-                ThreeStateLights.Red, ThreeStateLights.Yellow, ThreeStateLights.Green, ThreeStateLights.Yellow,
+                ThreeStateLights.Red, ThreeStateLights.Yellow, ThreeStateLights.Green, ThreeStateLights.Yellow
             };
 
             foreach (var state in states)

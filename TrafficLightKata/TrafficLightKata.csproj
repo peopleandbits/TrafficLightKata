@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FourState\FourStateHandlers.cs" />
+    <Compile Include="TwoState\TwoStateTrafficLight.cs" />
     <Compile Include="TrafficLightBase.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="FourState\FourStateTrafficLight.cs" />

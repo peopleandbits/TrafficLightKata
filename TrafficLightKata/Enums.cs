@@ -1,5 +1,7 @@
 ﻿namespace TrafficLightTemplate
 {
+    public enum TwoStateLights { Red, Green }
+
     public enum ThreeStateProcess { Red, YellowGoingGreen, Green, YellowGoingRed }
     public enum ThreeStateLights { Red, Yellow, Green }
 
